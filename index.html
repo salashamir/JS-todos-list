@@ -1,0 +1,86 @@
+<!-- CHRISTIAN SALAZAR - SPRINGBOARD - TODO LIST ASSIGNMENT -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- lineawesome icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- uuid script -->
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <!-- main script -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1 class="title">Todo List</h1>
+    <!-- todo list box -->
+    <div class="todo-list">
+      <!-- 1) todo list header -->
+      <div class="todo-header">
+        <h2 class="list-heading">Tasks:</h2>
+        <p class="task-count"><span id="tasks-left">6</span> tasks remaining</p>
+      </div>
+      <!-- 2) todo list body -->
+      <div class="todo-body">
+        <ul class="tasks">
+          <!-- <li class="todo completed">
+            <span class="todo-text">record todo list video</span>
+            <button
+              type="button"
+              class="todo-remove"
+              aria-label="remove item from todo list"
+            >
+              <i class="bx bx-trash trashcan"></i>
+            </button>
+          </li>
+          <li class="todo">
+            <span class="todo-text">record todo list video</span>
+            <button
+              type="button"
+              class="todo-remove"
+              aria-label="remove item from todo list"
+            >
+              <i class="bx bx-trash trashcan"></i>
+            </button>
+          </li>
+          <li class="todo">
+            <span class="todo-text">record todo list video</span>
+            <button
+              type="button"
+              class="todo-remove"
+              aria-label="remove item from todo list"
+            >
+              <i class="bx bx-trash trashcan"></i>
+            </button>
+          </li> -->
+        </ul>
+        <div class="new-task">
+          <form id="new-todo-form">
+            <input
+              id="todo-input"
+              type="text"
+              class="new task name"
+              placeholder="enter new task"
+              aria-label="new task name"
+            />
+            <button type="submit" class="btn task" aria-label="create new task">
+              +
+            </button>
+          </form>
+        </div>
+        <div class="delete-action">
+          <button id="empty-list-btn" class="btn delete">
+            Delete All Tasks
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

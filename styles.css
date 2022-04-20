@@ -1,0 +1,170 @@
+/* CHRISTIAN SALAZAR - SPRINGBOARD - TODO LIST ASSIGNMENT */
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700;900&display=swap");
+
+/* reset */
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --clr-primary: rgb(54, 112, 199);
+  --clr-light: #f4f4f4;
+  --clr-dark: #333;
+  --clr-warning: rgb(255, 0, 0);
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+}
+
+.title {
+  text-align: center;
+  font-size: calc(7vw + 3.2rem);
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  margin: -0.27em 0 0.5em;
+}
+
+.tasks {
+  list-style: none;
+}
+
+.todo-list {
+  --spacer: 3rem;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.2);
+  margin-inline: auto;
+  width: 90%;
+  max-width: 50rem;
+}
+.todo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacer);
+  background-color: #e4e4e4;
+}
+.list-heading {
+  margin: 0 1em 0 0;
+}
+.task-count {
+  font-size: 1.6rem;
+}
+.todo-body {
+  padding: var(--spacer);
+  position: relative;
+}
+.todo {
+  font-weight: 400;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6em 0;
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+.todo-remove {
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.trashcan {
+  transition: all 0.2s ease-in;
+}
+.trashcan:hover {
+  transform: scale(1.1);
+  color: var(--clr-warning);
+}
+.completed .todo-text {
+  opacity: 0.5;
+  color: rgb(103, 149, 219);
+  text-decoration: line-through;
+}
+
+form {
+  display: flex;
+}
+
+.btn {
+  border: 0;
+  background: 0;
+  color: inherit;
+  cursor: pointer;
+}
+.btn.task {
+  font-weight: 900;
+  margin-right: 0.3em;
+  font-size: 2.4rem;
+  color: var(--clr-primary);
+  transition: opacity 250ms ease-in;
+}
+.btn.task:hover {
+  opacity: 0.6;
+}
+.new {
+  order: 2;
+  background: transparent;
+  border: 0;
+  padding: 0.25em;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+  transition: border-bottom 150ms ease-in;
+}
+
+.new.task {
+  margin-bottom: 0;
+}
+
+.new-task {
+  margin-top: 1em;
+}
+
+.new:focus {
+  border-bottom-width: 3px;
+}
+
+.new::placeholder {
+  color: rgba(5, 5, 5, 0.6);
+}
+
+.new:focus::placeholder {
+  color: rgba(5, 5, 5, 0.1);
+}
+
+.delete-action {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.8em;
+}
+
+.btn.delete {
+  color: var(--clr-light);
+  background-color: var(--clr-primary);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.btn.delete:hover {
+  background-color: rgb(103, 149, 219);
+}
